@@ -1,0 +1,210 @@
+<html>
+	<title>Lakbay - Promotions</title>
+	
+	<body>
+		<style>
+			body {margin:0;}
+
+			.navbar {
+			  overflow: hidden;
+			  background-color: #EDEDED;
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+			  height: 20%;
+			}
+
+			.navbar a {
+			  float: center;
+			  display: block;
+			  text-align: center;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			.main {
+			  padding: 15px;
+			  margin-top: 10%;
+			  height: 500px;
+			}
+			
+			table, th, td 
+			{
+			border: 1px ;
+			border-collapse: collapse;
+			}
+		</style>
+			
+		<div class="navbar">
+			
+			<br>
+			<br>
+			
+			<table align="center" style="width:80%" cellpadding="-100%">
+				<td style="width:30%;color:#9B653C;font-size:55px;font-family:Bell MT"> <img src="compass.png" align="center" width="50px%"> Lakbay </td>
+				<td align="center" style="width:13%"> <a href="home.html" style="text-decoration:none;color:#496127;font-size:20px;font-family:Calibri"> Home </href> </td>
+				<td align="center" style="width:15%"> <a href="destinations.html" style="text-decoration:none;color:#496127;font-size:20px;font-family:Calibri"> Destinations </href> </td>
+				<td align="center" style="width:15%;background-color:#9B653C"> <a href="promotions.html" style="text-decoration:none;color:#FFFFFF;font-size:20px;font-family:Calibri"> Promotions </href> </td>
+				<td align="center" style="width:15%"> <a href="contactus.html" style="text-decoration:none;color:#496127;font-size:20px;font-family:Calibri"> Contact Us </href> </td>
+				<td align="center" style="width:15%"> <a href="aboutus.html" style="text-decoration:none;color:#496127;font-size:20px;font-family:Calibri"> About Us </href> </td>
+			</table>
+		</div>
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+		<div class="main">
+			<center>
+			<img src="plane-tickets.png" width="10%">
+			<p style="color:#9B653C;font-size:35px;font-family:Bell MT"> Join our raffle and win a trip to Boracay! </p>
+			
+			<table align="center" style="width:60%;font-size:20px;font-family:Calibri Light" cellpadding="7">
+			<tr>
+				<td align="center" style="background-color:#496127;color:#FFFFFF"> 
+				PROMO RUNS UNTIL DECEMBER 31, 2021
+				</td>
+			</tr>
+			<tr>
+				<td align="center"> 
+				<br>
+				Get a chance to win two tickets to Boracay for five days!
+				<br>
+				Fill up the form below to enter the raffle.
+				</td>
+			</tr>
+			</table>
+		</center>
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			<hr>
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+		<style>
+			body {font-family: Calibri, Calibri Light}
+			* {box-sizing: border-box;}
+
+			input[type=text], select, textarea 
+			{
+			  width: 100%;
+			  padding: 12px;
+			  border: 1px solid #ccc;
+			  border-radius: 5px;
+			  box-sizing: border-box;
+			  margin-top: 6px;
+			  margin-bottom: 16px;
+			  resize: vertical;
+			}
+			input[type=submit] 
+			{
+			  background-color: #FFFFFF;
+			  color: black;
+			  padding: 15px 32px;
+			  border: 1px solid #ccc;
+			  border-radius: 5px;
+			  text-align: center;
+			  text-decoration: none;
+			  font-size: 15px;
+			}
+			input[type=submit]:hover 
+			{
+			  background-color: #ccc;
+			  color: white;
+			}
+			.container 
+			{
+			  border-radius: 5px;
+			  background-color: #f2f2f2;
+			  padding: 20px;
+			}
+		</style>
+		
+		<script>
+			function validateForm(raffleform)
+        {
+            var inputs, index;
+            var form=document.getElementById(raffleform);
+            inputs = form.getElementsByTagName('input');
+            for (index = 0; index < inputs.length; ++index) {
+                // deal with inputs[index] element.
+                if (inputs[index].value==null || inputs[index].value=="")
+                {
+                    alert("Please complete the form");
+                    return false;
+                }
+            }
+        }
+		</script>
+
+			<p align="center" style="font-size:25px">
+			Raffle Form
+			</p>
+
+			<div class="container">
+			  <form name="raffleform" id="raffleform" action="submit.html" onsubmit="return validateForm('raffleform')" method="post">
+				<label for="fname">First Name</label>
+				<input type="text" name="fname" placeholder="Enter your first name">
+
+				<label for="mname">Middle Name</label>
+				<input type="text" name="mname" placeholder="Enter your middle name">
+				
+				<label for="lname">Last Name</label>
+				<input type="text" name="lname" placeholder="Enter your last name">
+				
+				<label for="sex">Sex</label>
+				<br>
+				<input type="radio" name="sex" >
+				<label for="male">Male</label>
+				<br>
+				<input type="radio" name="sex">
+				<label for="female">Female</label>
+				
+				<br>
+				<br>
+				<label for="email">Email</label>
+				<input type="text" name="email" placeholder="Enter your email">
+				
+				<label for="contact">Contact no.</label>
+				<input type="text" onkeypress="return isNumberKey(event)" placeholder="Enter your telephone no./cellphone no.">
+					<script>
+					function isNumberKey(evt)
+					{
+						var charCode = (evt.which) ? evt.which : event.keyCode
+						if (charCode > 31 && (charCode < 48 || charCode > 57))
+						return false;
+
+						return true;
+					}
+					</script>
+			  
+				<br>
+				<br>
+				
+				<center>
+				<input type="submit" value="Submit">
+				</center>
+			  </form>
+			</div>
+			
+			<br>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>
